@@ -6,6 +6,6 @@ import com.example.BackendSpringAPI.models.User;
 
 
 public interface IUserService {
-    User CreateUser(UserDTO userDTO) throws DataNotFoundException;
+    User CreateUser(UserDTO userDTO) throws Exception;
     String login(String email, String password) throws Exception;
 }
