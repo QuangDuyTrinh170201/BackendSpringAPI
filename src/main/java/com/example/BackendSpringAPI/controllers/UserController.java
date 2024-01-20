@@ -3,15 +3,21 @@ package com.example.BackendSpringAPI.controllers;
 import com.example.BackendSpringAPI.dtos.UserDTO;
 import com.example.BackendSpringAPI.dtos.UserLoginDTO;
 import com.example.BackendSpringAPI.models.User;
+import com.example.BackendSpringAPI.responses.LoginResponse;
 import com.example.BackendSpringAPI.services.IUserService;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 import java.util.List;
+import java.util.Locale;
 
 
 @RestController
@@ -19,6 +25,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
     private final IUserService userService;
+    private final MessageSource messageSource;
+    private final LocaleResolver localeResolver;
     @PostMapping("/register")
     public ResponseEntity<?> createUser(@Valid @RequestBody UserDTO userDTO, BindingResult result){
         try{
@@ -37,13 +45,21 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@Valid @RequestBody UserLoginDTO userLoginDTO){
+    public ResponseEntity<LoginResponse> login(@Valid @RequestBody UserLoginDTO userLoginDTO, HttpServletRequest request){
         try {
             String token = userService.login(userLoginDTO.getEmail(), userLoginDTO.getPassword());
             //Trả về token trong response
-            return ResponseEntity.ok(token);
+            Locale locale = localeResolver.resolveLocale(request);
+            return ResponseEntity.ok(LoginResponse.builder()
+                            .message(messageSource.getMessage("user.login.login_successfully", null, locale))
+                            .token(token)
+                    .build());
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
+            return ResponseEntity.badRequest().body(
+                   LoginResponse.builder()
+                           .message(e.getMessage())
+                           .build()
+            );
         }
 
     }

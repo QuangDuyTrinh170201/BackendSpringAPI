@@ -2,21 +2,28 @@ package com.example.BackendSpringAPI.controllers;
 
 import com.example.BackendSpringAPI.dtos.CategoryDTO;
 import com.example.BackendSpringAPI.models.Category;
+import com.example.BackendSpringAPI.responses.UpdateCategoryResponse;
 import com.example.BackendSpringAPI.services.CategoryService;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.LocaleResolver;
 
 import java.util.List;
+import java.util.Locale;
 
 @RestController
 @RequestMapping("${api.prefix}/categories")
 @RequiredArgsConstructor
 public class CategoryController {
     private final CategoryService categoryService;
+    private final MessageSource messageSource;
+    private final LocaleResolver localeResolver;
     @PostMapping("")
     public ResponseEntity<?> createCategory(@Valid @RequestBody CategoryDTO categoryDTO, BindingResult result){
         if(result.hasErrors()){
@@ -36,9 +43,12 @@ public class CategoryController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDTO categoryDTO){
+    public ResponseEntity<UpdateCategoryResponse> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDTO categoryDTO, HttpServletRequest request){
         categoryService.updateCategory(id, categoryDTO);
-        return ResponseEntity.ok("Update category successfully!");
+        Locale locale = localeResolver.resolveLocale(request);
+        return ResponseEntity.ok(UpdateCategoryResponse.builder()
+                        .message(messageSource.getMessage("category.update_category.update_successfully", null, locale))
+                .build());
     }
 
     @DeleteMapping("/{id}")

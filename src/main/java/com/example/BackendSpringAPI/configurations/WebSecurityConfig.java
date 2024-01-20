@@ -38,11 +38,15 @@ public class WebSecurityConfig {
                     requests.requestMatchers(
                             String.format("%s/users/register", apiPrefix),
                             String.format("%s/users/login", apiPrefix)
-                            )
+                    ).permitAll()
+                            .requestMatchers(GET,
+                                    String.format("%s/categories**", apiPrefix),
+                                    String.format("%s/products**", apiPrefix)
+                                    )
                             .permitAll()
                             //Categories config
-                            .requestMatchers(GET,
-                                    String.format("%s/categories**", apiPrefix)).hasAnyRole(Role.USER, Role.ADMIN)
+//                            .requestMatchers(GET,
+//                                    String.format("%s/categories**", apiPrefix)).hasAnyRole(Role.ADMIN, Role.USER)
                             .requestMatchers(POST,
                                     String.format("%s/categories/**", apiPrefix)).hasAnyRole(Role.ADMIN)
                             .requestMatchers(PUT,
@@ -51,14 +55,14 @@ public class WebSecurityConfig {
                                     String.format("%s/categories/**", apiPrefix)).hasAnyRole(Role.ADMIN)
 
                             //Product config
-                            .requestMatchers(GET,
-                                    String.format("%s/products**", apiPrefix)).hasAnyRole(Role.USER, Role.ADMIN)
+//                            .requestMatchers(GET,
+//                                    String.format("%s/products**", apiPrefix)).hasRole(Role.ADMIN)
                             .requestMatchers(POST,
-                                    String.format("%s/products/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+                                    String.format("%s/products/**", apiPrefix)).hasRole(Role.ADMIN)
                             .requestMatchers(PUT,
-                                    String.format("%s/products/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+                                    String.format("%s/products/**", apiPrefix)).hasRole(Role.ADMIN)
                             .requestMatchers(DELETE,
-                                    String.format("%s/products/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+                                    String.format("%s/products/**", apiPrefix)).hasRole(Role.ADMIN)
 
                             //Order config
                             .requestMatchers(POST,
