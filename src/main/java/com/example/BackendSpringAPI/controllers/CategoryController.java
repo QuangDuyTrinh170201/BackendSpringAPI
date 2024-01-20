@@ -2,6 +2,8 @@ package com.example.BackendSpringAPI.controllers;
 
 import com.example.BackendSpringAPI.dtos.CategoryDTO;
 import com.example.BackendSpringAPI.models.Category;
+import com.example.BackendSpringAPI.models.Product;
+import com.example.BackendSpringAPI.responses.ProductResponse;
 import com.example.BackendSpringAPI.responses.UpdateCategoryResponse;
 import com.example.BackendSpringAPI.services.CategoryService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -39,6 +41,16 @@ public class CategoryController {
     public ResponseEntity<List<Category>> getAllCategories(@RequestParam("page") int page, @RequestParam("limit") int limit){
         List<Category> categories = categoryService.getAllCategories();
         return ResponseEntity.ok(categories);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getCategoryWithId(@PathVariable("id") Long categoryId){
+        try {
+            Category existingCategory = categoryService.getCategoryById(categoryId);
+            return ResponseEntity.ok(existingCategory);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
 
