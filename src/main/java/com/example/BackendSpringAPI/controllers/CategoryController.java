@@ -37,8 +37,8 @@ public class CategoryController {
     }
 
     //Hiển thị tất cả categories
-    @GetMapping("")
-    public ResponseEntity<List<Category>> getAllCategories(@RequestParam("page") int page, @RequestParam("limit") int limit){
+    @GetMapping("/getAll")
+    public ResponseEntity<List<Category>> getAllCategories(){
         List<Category> categories = categoryService.getAllCategories();
         return ResponseEntity.ok(categories);
     }
