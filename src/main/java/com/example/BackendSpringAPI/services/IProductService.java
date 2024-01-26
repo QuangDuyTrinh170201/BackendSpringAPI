@@ -8,6 +8,8 @@ import com.example.BackendSpringAPI.responses.ProductResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 public interface IProductService {
     Product createProduct(ProductDTO productDTO) throws Exception;
     Product getProductById(long id) throws Exception;
@@ -17,4 +19,6 @@ public interface IProductService {
     boolean existsByName(String name);
 
     public ProductImage createProductImage(Long productId, ProductImageDTO productImageDTO) throws Exception;
+
+    public List<ProductResponse> getProductByCategoryId(Long categoryId, PageRequest pageRequest) throws Exception;
 }

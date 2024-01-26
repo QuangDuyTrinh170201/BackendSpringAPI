@@ -34,9 +34,6 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain) throws ServletException, IOException {
         try{
-            if(CorsUtils.isPreFlightRequest(request)){
-                response.setStatus(HttpServletResponse.SC_OK);
-            }
             if(isBypassToken(request)){
                 filterChain.doFilter(request, response);
                 return;
@@ -69,7 +66,10 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
     private boolean isBypassToken(@NonNull HttpServletRequest request){
         final List<Pair<String, String>> bypassTokens = Arrays.asList(
+                Pair.of(String.format("%s/roles", apiPrefix), "GET"),
+                Pair.of(String.format("%s/products/category**", apiPrefix), "GET"),
                 Pair.of(String.format("%s/products", apiPrefix), "GET"),
+                Pair.of(String.format("%s/products/images/*", apiPrefix), "GET"),
                 Pair.of(String.format("%s/products/**", apiPrefix), "GET"),
                 Pair.of(String.format("%s/categories/getAll", apiPrefix), "GET"),
                 Pair.of(String.format("%s/users/register", apiPrefix), "POST"),

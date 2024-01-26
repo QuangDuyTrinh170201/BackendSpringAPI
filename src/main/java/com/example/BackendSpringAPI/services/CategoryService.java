@@ -3,6 +3,7 @@ package com.example.BackendSpringAPI.services;
 import com.example.BackendSpringAPI.dtos.CategoryDTO;
 import com.example.BackendSpringAPI.models.Category;
 import com.example.BackendSpringAPI.repositories.CategoryRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ public class CategoryService implements ICategoryService{
     private final CategoryRepository categoryRepository;
 
     @Override
+    @Transactional
     public Category createCategory(CategoryDTO categoryDTO) {
         Category newCategory = Category.builder()
                 .name(categoryDTO.getName()).build();
@@ -32,6 +34,7 @@ public class CategoryService implements ICategoryService{
     }
 
     @Override
+    @Transactional
     public Category updateCategory(long categoryId, CategoryDTO categoryDTO) {
         Category existingCategory = getCategoryById(categoryId);
         existingCategory.setName(categoryDTO.getName());
@@ -40,6 +43,7 @@ public class CategoryService implements ICategoryService{
     }
 
     @Override
+    @Transactional
     public void deleteCategory(long id) {
         //xóa cứng
         categoryRepository.deleteById(id);

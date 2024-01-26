@@ -10,6 +10,7 @@ import com.example.BackendSpringAPI.services.IProductService;
 import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -109,17 +110,35 @@ public class ProductController {
         String contentType = file.getContentType();
         return contentType != null && contentType.startsWith("image/");
     }
+
+    @GetMapping("/images/{imageName}")
+    public ResponseEntity<?> viewImage(@PathVariable String imageName){
+        try{
+            java.nio.file.Path imagePath = Paths.get("uploads/"+imageName);
+            UrlResource resource = new UrlResource(imagePath.toUri());
+
+            if(resource.exists()){
+                return ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_JPEG)
+                        .body(resource);
+            }else{
+                return ResponseEntity.notFound().build();
+            }
+        }catch (Exception e){
+            return ResponseEntity.notFound().build();
+        }
+    }
     @GetMapping("")
-    public ResponseEntity<List<ProductListResponse>> getProducts(@RequestParam("page") int page, @RequestParam("limit") int limit){
-        PageRequest pageRequest = PageRequest.of(page, limit, Sort.by("createdAt").descending());
+    public ResponseEntity<ProductListResponse> getProducts(@RequestParam("page") int page, @RequestParam("limit") int limit){
+        PageRequest pageRequest = PageRequest.of(page-1, limit, Sort.by("id").ascending());
         Page<ProductResponse> productPage = productService.getAllProducts(pageRequest);
         int totalPages = productPage.getTotalPages();
         List<ProductResponse> products = productPage.getContent();
-        return ResponseEntity.ok(Collections.singletonList(ProductListResponse
+        return ResponseEntity.ok(ProductListResponse
                 .builder()
                 .products(products)
                 .totalPages(totalPages)
-                .build()));
+                .build());
     }
 
     @GetMapping("/{id}")
@@ -176,5 +195,21 @@ public class ProductController {
             }
         }
         return ResponseEntity.ok("Fake news :)))");
+    }
+
+    @GetMapping("/category/{id}")
+    public ResponseEntity<ProductListResponse> getProductsByCategory(
+            @PathVariable("id") Long categoryId,
+            @RequestParam("page") int page,
+            @RequestParam("limit") int limit) throws Exception {
+        PageRequest pageRequest = PageRequest.of(page, limit);
+        List<ProductResponse> productsByCategory = productService.getProductByCategoryId(categoryId, pageRequest);
+        int totalPages = 1;  // Assuming only one page for category-specific listing
+
+        return ResponseEntity.ok(ProductListResponse
+                .builder()
+                .products(productsByCategory)
+                .totalPages(totalPages)
+                .build());
     }
 }

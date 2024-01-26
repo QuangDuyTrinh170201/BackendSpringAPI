@@ -8,6 +8,7 @@ import com.example.BackendSpringAPI.models.Role;
 import com.example.BackendSpringAPI.models.User;
 import com.example.BackendSpringAPI.repositories.RoleRepository;
 import com.example.BackendSpringAPI.repositories.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +17,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -27,6 +29,7 @@ public class UserService implements IUserService{
     private final JwtTokenUtil jwtTokenUtil;
     private final AuthenticationManager authenticationManager;
     @Override
+    @Transactional
     public User CreateUser(UserDTO userDTO) throws Exception {
         //register user
         String email = userDTO.getEmail();
@@ -61,7 +64,7 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public String login(String email, String password) throws Exception{
+    public String login(String email, String password, Long roleId) throws Exception{
         Optional<User> optionalUser = userRepository.findByEmail(email);
         if(optionalUser.isEmpty()){
             throw new DataNotFoundException("Invalid email or password!");
@@ -73,6 +76,11 @@ public class UserService implements IUserService{
             if(!passwordEncoder.matches(password, existingUser.getPassword())){
                 throw new BadCredentialsException("Invalid email or password");
             }
+        }
+
+        Optional<Role> optionalRole = roleRepository.findById(roleId);
+        if(optionalRole.isEmpty() || !roleId.equals(existingUser.getRole().getId())){
+            throw new DataNotFoundException("Your role is not accepted or correct");
         }
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
           email, password,

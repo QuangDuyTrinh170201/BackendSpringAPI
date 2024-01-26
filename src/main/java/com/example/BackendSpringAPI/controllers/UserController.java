@@ -47,7 +47,7 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@Valid @RequestBody UserLoginDTO userLoginDTO, HttpServletRequest request){
         try {
-            String token = userService.login(userLoginDTO.getEmail(), userLoginDTO.getPassword());
+            String token = userService.login(userLoginDTO.getEmail(), userLoginDTO.getPassword(), userLoginDTO.getRoleId());
             //Trả về token trong response
             Locale locale = localeResolver.resolveLocale(request);
             return ResponseEntity.ok(LoginResponse.builder()

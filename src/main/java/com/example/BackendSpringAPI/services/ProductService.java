@@ -11,11 +11,13 @@ import com.example.BackendSpringAPI.repositories.CategoryRepository;
 import com.example.BackendSpringAPI.repositories.ProductImageRepository;
 import com.example.BackendSpringAPI.repositories.ProductRepository;
 import com.example.BackendSpringAPI.responses.ProductResponse;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,6 +27,7 @@ public class ProductService implements IProductService{
     private final CategoryRepository categoryRepository;
     private final ProductImageRepository productImageRepository;
     @Override
+    @Transactional
     public Product createProduct(ProductDTO productDTO) throws DataNotFoundException {
         Category existingCategory = categoryRepository
                 .findById(productDTO.getCategoryId())
@@ -52,6 +55,7 @@ public class ProductService implements IProductService{
     }
 
     @Override
+    @Transactional
     public Product updateProduct(long id, ProductDTO productDTO) throws Exception {
         Product existingProduct = getProductById(id);
         if(existingProduct != null){
@@ -69,6 +73,7 @@ public class ProductService implements IProductService{
     }
 
     @Override
+    @Transactional
     public void deleteProduct(long id) {
         Optional<Product> optionalProduct = productRepository.findById(id);
         optionalProduct.ifPresent(productRepository::delete);
@@ -94,5 +99,14 @@ public class ProductService implements IProductService{
             throw new InvalidParamException("Number of image must be <= "+ProductImage.MAXIMUM_IMAGES_PER_PRODUCT);
         }
         return productImageRepository.save(newProductImage);
+    }
+
+    public List<ProductResponse> getProductByCategoryId(Long categoryId, PageRequest pageRequest) throws Exception{
+        Category category = categoryRepository.findById(categoryId)
+                .orElseThrow(() -> new DataNotFoundException("Cannot find category with id: " + categoryId));
+
+        Page<Product> productsByCategory = productRepository.findByCategory(category, pageRequest);
+
+        return productsByCategory.map(ProductResponse::fromProduct).getContent();
     }
 }

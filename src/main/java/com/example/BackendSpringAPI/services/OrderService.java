@@ -7,6 +7,7 @@ import com.example.BackendSpringAPI.models.OrderStatus;
 import com.example.BackendSpringAPI.models.User;
 import com.example.BackendSpringAPI.repositories.OrderRepository;
 import com.example.BackendSpringAPI.repositories.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.aspectj.weaver.ast.Or;
 import org.modelmapper.ModelMapper;
@@ -24,6 +25,7 @@ public class OrderService implements IOrderService{
     private final OrderRepository orderRepository;
     private final ModelMapper modelMapper;
     @Override
+    @Transactional
     public Order createOrder(OrderDTO orderDTO) throws Exception {
         //tìm xem userId đã tồn tại hay chưa?
         User user = userRepository
@@ -57,6 +59,7 @@ public class OrderService implements IOrderService{
     }
 
     @Override
+    @Transactional
     public Order updateOrder(Long id, OrderDTO orderDTO) throws DataNotFoundException {
         Order order = orderRepository.findById(id).orElseThrow(() ->
                 new DataNotFoundException("Cannot find order with id: "+id));
@@ -71,6 +74,7 @@ public class OrderService implements IOrderService{
     }
 
     @Override
+    @Transactional
     public void deleteOrder(Long id) {
         Order order = orderRepository.findById(id).orElse(null);
         //Không xóa cứng order => soft delete
