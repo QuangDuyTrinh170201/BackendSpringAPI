@@ -44,14 +44,19 @@ public class ProductService implements IProductService{
 
     @Override
     public Product getProductById(long productId) throws Exception {
-        return productRepository.findById(productId)
-                .orElseThrow(()->new DataNotFoundException("Cannot find product with id: "+productId));
+        Optional<Product> optionalProduct = productRepository.getDetailProduct(productId);
+        if(optionalProduct.isPresent()) {
+            return optionalProduct.get();
+        }
+        throw new DataNotFoundException("Cannot find product with id =" + productId);
     }
 
     @Override
-    public Page<ProductResponse> getAllProducts(PageRequest pageRequest) {
+    public Page<ProductResponse> getAllProducts(String keyword, Long categoryId, PageRequest pageRequest) {
         //lâý danh sách sản phẩm theo page và limit
-        return productRepository.findAll(pageRequest).map(ProductResponse::fromProduct);
+        Page<Product> productPage;
+        productPage = productRepository.searchProducts(categoryId, keyword, pageRequest);
+        return productPage.map(ProductResponse::fromProduct);
     }
 
     @Override

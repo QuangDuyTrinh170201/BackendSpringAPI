@@ -38,11 +38,12 @@ public class WebSecurityConfig {
                     requests.requestMatchers(
                                     String.format("%s/users/register", apiPrefix),
                                     String.format("%s/users/login", apiPrefix),
-                                    String.format("%s/categories/getAll", apiPrefix),
-                                    String.format("%s/products", apiPrefix)
+                                    String.format("%s/categories/getAll", apiPrefix)
+
                             ).permitAll()
                             .requestMatchers(GET,
                                     String.format("%s/products/**", apiPrefix),
+                                    String.format("%s/products/all**", apiPrefix),
                                     String.format("%s/products/images/*", apiPrefix),
                                     String.format("%s/products/category**", apiPrefix)).permitAll()
                             .requestMatchers(GET, String.format("%s/roles**", apiPrefix)).permitAll()
