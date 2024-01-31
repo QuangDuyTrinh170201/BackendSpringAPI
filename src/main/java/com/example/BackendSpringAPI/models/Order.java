@@ -45,7 +45,7 @@ public class Order {
     private String status;
 
     @Column(name = "total_money")
-    private Integer totalMoney;
+    private Float totalMoney;
 
     @Column(name = "shipping_method")
     private String shippingMethod;

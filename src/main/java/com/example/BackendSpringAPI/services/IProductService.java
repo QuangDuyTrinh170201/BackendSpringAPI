@@ -20,5 +20,7 @@ public interface IProductService {
 
     public ProductImage createProductImage(Long productId, ProductImageDTO productImageDTO) throws Exception;
 
-    public List<ProductResponse> getProductByCategoryId(Long categoryId, PageRequest pageRequest) throws Exception;
+    public List<ProductResponse> getProductByCategoryId(Long categoryId) throws Exception;
+
+    public List<Product> findProductsByIds(List<Long> productIds);
 }

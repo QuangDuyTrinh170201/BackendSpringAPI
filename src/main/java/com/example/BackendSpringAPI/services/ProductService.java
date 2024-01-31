@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -106,12 +107,21 @@ public class ProductService implements IProductService{
         return productImageRepository.save(newProductImage);
     }
 
-    public List<ProductResponse> getProductByCategoryId(Long categoryId, PageRequest pageRequest) throws Exception{
+    @Override
+    public List<ProductResponse> getProductByCategoryId(Long categoryId) throws Exception {
         Category category = categoryRepository.findById(categoryId)
                 .orElseThrow(() -> new DataNotFoundException("Cannot find category with id: " + categoryId));
 
-        Page<Product> productsByCategory = productRepository.findByCategory(category, pageRequest);
+        List<Product> productsByCategory = productRepository.findAllByCategory(category);
 
-        return productsByCategory.map(ProductResponse::fromProduct).getContent();
+        return productsByCategory.stream()
+                .map(ProductResponse::fromProduct)
+                .collect(Collectors.toList());
+    }
+
+
+    @Override
+    public List<Product> findProductsByIds(List<Long> productIds){
+        return productRepository.findProductsByIds(productIds);
     }
 }
