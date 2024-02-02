@@ -2,6 +2,7 @@ package com.example.BackendSpringAPI.controllers;
 
 import com.example.BackendSpringAPI.dtos.OrderDTO;
 import com.example.BackendSpringAPI.models.Order;
+import com.example.BackendSpringAPI.responses.OrderResponse;
 import com.example.BackendSpringAPI.services.IOrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -47,7 +48,7 @@ public class OrderController {
     public ResponseEntity<?> getOrder(@Valid @PathVariable("id") Long orderId){
         try{
             Order existingOrder = orderService.getOrder(orderId);
-            return ResponseEntity.ok(existingOrder);
+            return ResponseEntity.ok(OrderResponse.fromOrder(existingOrder));
         }catch(Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }

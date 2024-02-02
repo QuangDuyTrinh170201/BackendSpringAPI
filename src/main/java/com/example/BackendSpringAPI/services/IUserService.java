@@ -8,5 +8,7 @@ import com.example.BackendSpringAPI.models.User;
 public interface IUserService {
     User CreateUser(UserDTO userDTO) throws Exception;
     String login(String email, String password, Long roleId) throws Exception;
+
+    User getUserDetailsFromToken(String extractedToken) throws Exception;
 //    String login(String email, String password) throws Exception;
 }

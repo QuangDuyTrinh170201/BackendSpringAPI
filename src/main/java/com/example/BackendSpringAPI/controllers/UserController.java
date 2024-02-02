@@ -3,7 +3,9 @@ package com.example.BackendSpringAPI.controllers;
 import com.example.BackendSpringAPI.dtos.UserDTO;
 import com.example.BackendSpringAPI.dtos.UserLoginDTO;
 import com.example.BackendSpringAPI.models.User;
+import com.example.BackendSpringAPI.repositories.UserRepository;
 import com.example.BackendSpringAPI.responses.LoginResponse;
+import com.example.BackendSpringAPI.responses.UserResponse;
 import com.example.BackendSpringAPI.services.IUserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
@@ -61,6 +63,16 @@ public class UserController {
                            .build()
             );
         }
+    }
 
+    @PostMapping("/details")
+    public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String token){
+        try{
+            String extractedToken = token.substring(7);
+            User user = userService.getUserDetailsFromToken(extractedToken);
+            return ResponseEntity.ok(UserResponse.fromUser(user));
+        }catch(Exception e){
+            return ResponseEntity.badRequest().build();
+        }
     }
 }

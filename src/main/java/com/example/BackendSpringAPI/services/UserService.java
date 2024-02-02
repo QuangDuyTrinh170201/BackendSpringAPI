@@ -52,6 +52,7 @@ public class UserService implements IUserService{
                 .dateOfBirth(userDTO.getDateOfBirth())
                 .facebookAccountId(userDTO.getFacebookAccountId())
                 .googleAccountId(userDTO.getGoogleAccountId())
+                .active(true)
                 .build();
 
         newUser.setRole(role);
@@ -82,6 +83,9 @@ public class UserService implements IUserService{
         if(optionalRole.isEmpty() || !roleId.equals(existingUser.getRole().getId())){
             throw new DataNotFoundException("Your role is not accepted or correct");
         }
+        if(!optionalUser.get().isActive()) {
+            throw new DataNotFoundException("Your account is locked, please contact admin to unlock!");
+        }
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
           email, password,
                 existingUser.getAuthorities()
@@ -90,4 +94,21 @@ public class UserService implements IUserService{
         authenticationManager.authenticate(authenticationToken);
         return jwtTokenUtil.generateToken(existingUser);
     }
+
+    @Override
+    public User getUserDetailsFromToken(String token) throws Exception {
+        if(jwtTokenUtil.isTokenExpired(token)) {
+            throw new Exception("Token is expired");
+        }
+        String email = jwtTokenUtil.extractEmail(token);
+        Optional<User> user = userRepository.findByEmail(email);
+
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            throw new Exception("User not found");
+        }
+    }
+
+
 }
