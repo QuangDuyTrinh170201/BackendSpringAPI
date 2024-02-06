@@ -1,7 +1,10 @@
 package com.example.BackendSpringAPI.controllers;
 
+import com.example.BackendSpringAPI.dtos.ProductDTO;
+import com.example.BackendSpringAPI.dtos.UpdateUserDTO;
 import com.example.BackendSpringAPI.dtos.UserDTO;
 import com.example.BackendSpringAPI.dtos.UserLoginDTO;
+import com.example.BackendSpringAPI.models.Product;
 import com.example.BackendSpringAPI.models.User;
 import com.example.BackendSpringAPI.repositories.UserRepository;
 import com.example.BackendSpringAPI.responses.LoginResponse;
@@ -11,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -66,13 +70,31 @@ public class UserController {
     }
 
     @PostMapping("/details")
-    public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String token){
+    public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String authorizationHeader){
         try{
-            String extractedToken = token.substring(7);
+            String extractedToken = authorizationHeader.substring(7);
             User user = userService.getUserDetailsFromToken(extractedToken);
             return ResponseEntity.ok(UserResponse.fromUser(user));
         }catch(Exception e){
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @PutMapping("/details/{userId}")
+    public ResponseEntity<UserResponse> updateUserDetails(@PathVariable Long userId, @RequestBody UpdateUserDTO updatedUserDTO, @RequestHeader("Authorization") String authorizationHeader){
+        try{
+            String extractedToken = authorizationHeader.substring(7);
+            User user = userService.getUserDetailsFromToken(extractedToken);
+            //Ensure that the user making the request matches the user being updated
+            if(user.getId() != userId){
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+            }
+            User updatedUser = userService.updateUser(userId, updatedUserDTO);
+            return ResponseEntity.ok(UserResponse.fromUser(updatedUser));
+        }catch(Exception e){
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+
 }

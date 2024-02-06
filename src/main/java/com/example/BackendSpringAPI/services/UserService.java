@@ -1,6 +1,7 @@
 package com.example.BackendSpringAPI.services;
 
 import com.example.BackendSpringAPI.components.JwtTokenUtil;
+import com.example.BackendSpringAPI.dtos.UpdateUserDTO;
 import com.example.BackendSpringAPI.dtos.UserDTO;
 import com.example.BackendSpringAPI.exceptions.DataNotFoundException;
 import com.example.BackendSpringAPI.exceptions.PermissionDenyException;
@@ -109,6 +110,47 @@ public class UserService implements IUserService{
             throw new Exception("User not found");
         }
     }
+
+    @Transactional
+    @Override
+    public User updateUser(Long userId, UpdateUserDTO updatedUserDTO) throws Exception{
+        //find the existing user by userId
+        User existingUser = userRepository.findById(userId)
+                .orElseThrow(() -> new DataNotFoundException("User not found"));
+
+        //check if the phone number is being changed and if it already exists for another user
+        String newEmail = updatedUserDTO.getEmail();
+        if(!existingUser.getEmail().equals(newEmail) && userRepository.existsByEmail(newEmail)){
+            throw new DataIntegrityViolationException("Email already exists");
+        }
+        if(updatedUserDTO.getFullName() != null){
+            existingUser.setFullName(updatedUserDTO.getFullName());
+        }
+        if(newEmail != null){
+            existingUser.setEmail(newEmail);
+        }
+        if(updatedUserDTO.getAddress() != null){
+            existingUser.setAddress(updatedUserDTO.getAddress());
+        }
+        if(updatedUserDTO.getDateOfBirth() != null){
+            existingUser.setDateOfBirth(updatedUserDTO.getDateOfBirth());
+        }
+        if(updatedUserDTO.getFacebookAccountId() > 0){
+            existingUser.setFacebookAccountId(updatedUserDTO.getFacebookAccountId());
+        }
+        if(updatedUserDTO.getGoogleAccountId() > 0){
+            existingUser.setGoogleAccountId(updatedUserDTO.getGoogleAccountId());
+        }
+
+        if(updatedUserDTO.getPassword() != null && !updatedUserDTO.getPassword().isEmpty()){
+            String newPassword = updatedUserDTO.getPassword();
+            String encodedPassword = passwordEncoder.encode(newPassword);
+            existingUser.setPassword(encodedPassword);
+        }
+
+        return userRepository.save(existingUser);
+    }
+
 
 
 }
