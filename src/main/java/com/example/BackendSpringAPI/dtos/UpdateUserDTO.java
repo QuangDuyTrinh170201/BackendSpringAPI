@@ -19,12 +19,15 @@ public class UpdateUserDTO {
     private String phoneNumber;
 
     @JsonProperty("email")
-    @NotBlank(message = "Email is required")
     private String email;
 
     private String address;
 
+    @JsonProperty("password")
     private String password;
+
+    @JsonProperty("retype_password")
+    private String retypePassword;
 
     @JsonProperty("date_of_birth")
     private Date dateOfBirth;

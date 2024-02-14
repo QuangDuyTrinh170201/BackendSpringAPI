@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -53,7 +54,7 @@ public class WebSecurityConfig {
                                     String.format("%s/categories/**", apiPrefix)).hasAnyRole(Role.ADMIN)
                             .requestMatchers(DELETE,
                                     String.format("%s/categories/**", apiPrefix)).hasAnyRole(Role.ADMIN)
-
+                            .requestMatchers(GET, String.format("%s/users/all", apiPrefix)).hasRole(Role.ADMIN)
                             //Product config
 //                            .requestMatchers(GET,
 //                                    String.format("%s/products**", apiPrefix)).hasRole(Role.ADMIN)
@@ -75,6 +76,10 @@ public class WebSecurityConfig {
                                     String.format("%s/orders/**", apiPrefix)).hasRole(Role.ADMIN)
                             .requestMatchers(DELETE,
                                     String.format("%s/orders/**", apiPrefix)).hasRole(Role.ADMIN)
+                            .requestMatchers(GET,
+                                    String.format("%s/orders/get-orders-by-keyword", apiPrefix)).hasRole(Role.ADMIN)
+                            .requestMatchers(GET,
+                                    String.format("%s/orders/get-orders-by-keyword-not-paging", apiPrefix)).hasRole(Role.ADMIN)
 
                             //Order Details config
                             .requestMatchers(POST,

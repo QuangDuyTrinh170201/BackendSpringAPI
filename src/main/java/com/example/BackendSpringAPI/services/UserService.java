@@ -19,6 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.swing.text.html.Option;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -118,7 +119,6 @@ public class UserService implements IUserService{
         User existingUser = userRepository.findById(userId)
                 .orElseThrow(() -> new DataNotFoundException("User not found"));
 
-        //check if the phone number is being changed and if it already exists for another user
         String newEmail = updatedUserDTO.getEmail();
         if(!existingUser.getEmail().equals(newEmail) && userRepository.existsByEmail(newEmail)){
             throw new DataIntegrityViolationException("Email already exists");
@@ -128,6 +128,9 @@ public class UserService implements IUserService{
         }
         if(newEmail != null){
             existingUser.setEmail(newEmail);
+        }
+        if(updatedUserDTO.getPhoneNumber() != null){
+            existingUser.setPhoneNumber(updatedUserDTO.getPhoneNumber());
         }
         if(updatedUserDTO.getAddress() != null){
             existingUser.setAddress(updatedUserDTO.getAddress());
@@ -143,6 +146,9 @@ public class UserService implements IUserService{
         }
 
         if(updatedUserDTO.getPassword() != null && !updatedUserDTO.getPassword().isEmpty()){
+            if(!updatedUserDTO.getPassword().equals(updatedUserDTO.getRetypePassword())) {
+                throw new DataNotFoundException("Password and retype password not the same");
+            }
             String newPassword = updatedUserDTO.getPassword();
             String encodedPassword = passwordEncoder.encode(newPassword);
             existingUser.setPassword(encodedPassword);
@@ -151,6 +157,19 @@ public class UserService implements IUserService{
         return userRepository.save(existingUser);
     }
 
+
+    @Override
+    public List<User> getAllUsers() throws Exception {
+        try {
+            List<User> users = userRepository.findAll();
+            if (users.isEmpty()) {
+                throw new DataNotFoundException("No users found");
+            }
+            return users;
+        } catch (Exception e) {
+            throw new Exception("Failed to retrieve users: " + e.getMessage());
+        }
+    }
 
 
 }

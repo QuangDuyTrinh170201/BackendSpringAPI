@@ -12,6 +12,8 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.aspectj.weaver.ast.Or;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -121,5 +123,15 @@ public class OrderService implements IOrderService{
     @Override
     public List<Order> findByUserId(Long userId) {
         return orderRepository.findByUserId(userId);
+    }
+
+    @Override
+    public Page<Order> getOrdersByKeyword(String keyword, Pageable pageable){
+        return orderRepository.findByKeyword(keyword, pageable);
+    }
+
+    @Override
+    public List<Order> getOrdersByKeywordNotPaging(String keyword) {
+        return orderRepository.findByKeywordNotPaging(keyword);
     }
 }
