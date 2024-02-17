@@ -96,6 +96,16 @@ public class UserController {
         }
     }
 
+    @PutMapping("/updateForAdmin/{userId}")
+    public ResponseEntity<?> updateUserByAdmin(@PathVariable Long userId, @RequestBody UpdateUserDTO updatedUserDTO) {
+        try {
+            User updatedUser = userService.updateUserInforByAdmin(userId, updatedUserDTO);
+            return ResponseEntity.ok(updatedUser);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error updating user information: " + e.getMessage());
+        }
+    }
+
     @GetMapping("/all")
     public ResponseEntity<List<User>> getAllUsers() {
         try {

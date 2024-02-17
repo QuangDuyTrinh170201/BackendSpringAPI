@@ -19,4 +19,6 @@ public interface IUserService {
 
     public List<User> getAllUsers() throws Exception;
 
+    public User updateUserInforByAdmin(Long userId, UpdateUserDTO updatedUserDTO) throws Exception;
+
 }

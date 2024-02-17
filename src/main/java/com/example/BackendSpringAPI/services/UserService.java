@@ -157,6 +157,34 @@ public class UserService implements IUserService{
         return userRepository.save(existingUser);
     }
 
+    @Transactional
+    @Override
+    public User updateUserInforByAdmin(Long userId, UpdateUserDTO updatedUserDTO) throws Exception {
+        // Tìm người dùng hiện có dựa vào userId
+        User existingUser = userRepository.findById(userId)
+                .orElseThrow(() -> new DataNotFoundException("User not found"));
+
+        // Cập nhật trường isActive nếu có
+        Boolean isActive = updatedUserDTO.getIsActive();
+        if (isActive != null) {
+            existingUser.setActive(isActive);
+        }
+
+        // Cập nhật trường roleId nếu có
+        Long roleId = updatedUserDTO.getRoleId();
+        if (roleId != null) {
+            // Truy vấn cơ sở dữ liệu để lấy đối tượng Role tương ứng với roleId
+            Role role = roleRepository.findById(roleId)
+                    .orElseThrow(() -> new DataNotFoundException("Role not found"));
+
+            // Gán đối tượng Role vào trường role của User
+            existingUser.setRole(role);
+        }
+
+        return userRepository.save(existingUser);
+    }
+
+
 
     @Override
     public List<User> getAllUsers() throws Exception {
