@@ -1,0 +1,278 @@
+2024-02-17 08:25:55.753 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 08:25:55.792 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 12720 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 08:25:55.793 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 08:25:56.496 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 08:25:56.594 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 7 JPA repository interfaces.
+2024-02-17 08:25:57.249 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 08:25:57.256 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 08:25:57.259 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 08:25:57.259 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 08:25:57.318 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 08:25:57.319 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1480 ms
+2024-02-17 08:25:57.446 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 08:25:57.491 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 08:25:57.524 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 08:25:57.764 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 08:25:57.788 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 08:25:57.920 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f2d3391
+2024-02-17 08:25:57.922 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 08:25:57.941 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 08:25:57.942 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 08:25:58.774 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 08:25:58.775 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 08:25:59.145 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 08:25:59.215 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 08:26:00.139 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57441348, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@706dd38b, org.springframework.security.web.context.SecurityContextHolderFilter@450555ac, org.springframework.security.web.header.HeaderWriterFilter@e39df43, org.springframework.web.filter.CorsFilter@51edc97d, org.springframework.security.web.authentication.logout.LogoutFilter@e76aa, com.example.BackendSpringAPI.filters.JwtTokenFilter@6e4bccc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@616f1c2e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e58f36d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5837b801, org.springframework.security.web.access.ExceptionTranslationFilter@7269674d, org.springframework.security.web.access.intercept.AuthorizationFilter@4aedac7f]
+2024-02-17 08:26:00.302 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 08:26:00.322 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 08:26:00.329 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.918 seconds (process running for 5.42)
+2024-02-17 08:26:27.290 [http-nio-1702-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-17 08:26:27.290 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-17 08:26:27.291 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-17 08:26:27.298 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?page=0&limit=10&keyword=macbook&category_id=1
+2024-02-17 08:26:27.315 [http-nio-1702-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/all' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-17 08:26:27.325 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?page=0&limit=10&keyword=macbook&category_id=1
+2024-02-17 08:26:27.350 [http-nio-1702-exec-1] INFO  c.e.B.controllers.ProductController - keyword = macbook, category_id = 1, page = 0, limit = 10
+2024-02-17 08:26:27.549 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 08:28:58.675 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 08:28:58.678 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 08:28:58.684 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 08:29:00.466 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 08:29:00.506 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 20052 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 08:29:00.507 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 08:29:01.203 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 08:29:01.283 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2024-02-17 08:29:01.916 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 08:29:01.924 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 08:29:01.926 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 08:29:01.927 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 08:29:01.998 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 08:29:01.999 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1437 ms
+2024-02-17 08:29:02.125 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 08:29:02.177 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 08:29:02.208 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 08:29:02.415 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 08:29:02.439 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 08:29:02.569 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@202f054f
+2024-02-17 08:29:02.572 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 08:29:02.590 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 08:29:02.591 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 08:29:03.452 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 08:29:03.455 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 08:29:03.856 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 08:29:03.918 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 08:29:04.793 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f7b7ac4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19dffe76, org.springframework.security.web.context.SecurityContextHolderFilter@78fdc1bb, org.springframework.security.web.header.HeaderWriterFilter@1e5259c0, org.springframework.web.filter.CorsFilter@2086dfb8, org.springframework.security.web.authentication.logout.LogoutFilter@4d78dd9d, com.example.BackendSpringAPI.filters.JwtTokenFilter@1be3a294, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@189d8bef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af410a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9a1b870, org.springframework.security.web.access.ExceptionTranslationFilter@bbe07e5, org.springframework.security.web.access.intercept.AuthorizationFilter@698df5e8]
+2024-02-17 08:29:04.958 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 08:29:04.978 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 08:29:04.984 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.851 seconds (process running for 5.4)
+2024-02-17 08:40:42.316 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 08:40:42.319 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 08:40:42.326 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 09:16:51.081 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 09:16:51.116 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 15388 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 09:16:51.117 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 09:16:51.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 09:16:51.844 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 7 JPA repository interfaces.
+2024-02-17 09:16:52.418 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 09:16:52.425 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:16:52.427 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 09:16:52.427 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 09:16:52.488 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 09:16:52.490 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1330 ms
+2024-02-17 09:16:52.612 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 09:16:52.663 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 09:16:52.697 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 09:16:52.891 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 09:16:52.912 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 09:16:53.048 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@141bb6b8
+2024-02-17 09:16:53.050 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 09:16:53.072 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 09:16:53.072 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 09:16:53.894 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 09:16:53.896 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:16:54.247 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 09:16:54.301 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 09:16:55.102 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19dffe76, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2086dfb8, org.springframework.security.web.context.SecurityContextHolderFilter@74ed1b3d, org.springframework.security.web.header.HeaderWriterFilter@3b4aeacd, org.springframework.web.filter.CorsFilter@9a1b870, org.springframework.security.web.authentication.logout.LogoutFilter@5802572b, com.example.BackendSpringAPI.filters.JwtTokenFilter@33502cfe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5af410a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c12e25d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d484eda, org.springframework.security.web.access.ExceptionTranslationFilter@7c089fbc, org.springframework.security.web.access.intercept.AuthorizationFilter@32317a37]
+2024-02-17 09:16:55.246 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:16:55.265 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 09:16:55.271 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.471 seconds (process running for 4.922)
+2024-02-17 09:18:05.755 [http-nio-1702-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-17 09:18:05.756 [http-nio-1702-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-17 09:18:05.757 [http-nio-1702-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-17 09:18:05.764 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/products/uploads/1
+2024-02-17 09:18:05.970 [http-nio-1702-exec-3] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/uploads/1' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-17 09:18:05.981 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/products/uploads/1
+2024-02-17 09:18:29.208 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:18:29.208 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-17 09:18:29.216 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:18:29.216 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-17 09:18:29.218 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-17 09:18:29.220 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:18:29.222 [http-nio-1702-exec-6] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 1, limit = 10
+2024-02-17 09:18:29.227 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:18:29.277 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:18:29.284 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-17 09:18:29.284 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/null
+2024-02-17 09:18:29.286 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/null
+2024-02-17 09:18:29.286 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-17 09:18:29.289 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:18:29.290 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:19:34.978 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:19:34.978 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-17 09:19:34.980 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-17 09:19:34.980 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:19:34.982 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-17 09:19:34.982 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:19:34.983 [http-nio-1702-exec-9] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 1, limit = 10
+2024-02-17 09:19:34.989 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:19:34.991 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:19:35.001 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-17 09:19:35.003 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-17 09:19:35.006 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:19:36.508 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all?keyword=&category_id=0&page=2&limit=10
+2024-02-17 09:19:36.510 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?keyword=&category_id=0&page=2&limit=10
+2024-02-17 09:19:36.511 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?keyword=&category_id=0&page=2&limit=10
+2024-02-17 09:19:36.512 [http-nio-1702-exec-1] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 2, limit = 10
+2024-02-17 09:19:36.518 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:19:37.474 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:19:37.475 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:19:37.476 [http-nio-1702-exec-10] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 1, limit = 10
+2024-02-17 09:19:37.483 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:19:37.485 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-17 09:19:37.486 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-17 09:19:37.488 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:01.555 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:20:01.557 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 09:20:01.564 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 09:20:05.764 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 09:20:05.802 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 13424 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 09:20:05.803 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 09:20:06.470 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 09:20:06.542 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 7 JPA repository interfaces.
+2024-02-17 09:20:07.127 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 09:20:07.134 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:20:07.136 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 09:20:07.136 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 09:20:07.196 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 09:20:07.197 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1352 ms
+2024-02-17 09:20:07.325 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 09:20:07.368 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 09:20:07.400 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 09:20:07.614 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 09:20:07.647 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 09:20:07.774 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fa0ee7e
+2024-02-17 09:20:07.775 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 09:20:07.793 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 09:20:07.794 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 09:20:08.621 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 09:20:08.624 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:20:08.996 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 09:20:09.050 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 09:20:09.889 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1727d525, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f7b7ac4, org.springframework.security.web.context.SecurityContextHolderFilter@40b0436e, org.springframework.security.web.header.HeaderWriterFilter@7c089fbc, org.springframework.web.filter.CorsFilter@19dffe76, org.springframework.security.web.authentication.logout.LogoutFilter@117bb3a4, com.example.BackendSpringAPI.filters.JwtTokenFilter@296949c8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74ed1b3d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@189d8bef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2086dfb8, org.springframework.security.web.access.ExceptionTranslationFilter@1bd7dd4a, org.springframework.security.web.access.intercept.AuthorizationFilter@541b89ec]
+2024-02-17 09:20:10.043 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:20:10.059 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 09:20:10.066 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.599 seconds (process running for 5.015)
+2024-02-17 09:20:12.934 [http-nio-1702-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-17 09:20:12.934 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-17 09:20:12.935 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-17 09:20:12.944 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:20:12.944 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-17 09:20:12.961 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-17 09:20:12.961 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:20:12.965 [http-nio-1702-exec-4] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/all' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-17 09:20:12.973 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-17 09:20:12.973 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:20:12.996 [http-nio-1702-exec-4] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 1, limit = 10
+2024-02-17 09:20:13.135 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.162 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.170 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2196ed3f-3964-48eb-8d04-dd3fccd3ffcd_zen4.png
+2024-02-17 09:20:13.170 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0897df2f-e550-457f-9b98-3ef35ac04ec9_lenovotest1.jpg
+2024-02-17 09:20:13.170 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-17 09:20:13.170 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-17 09:20:13.170 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-17 09:20:13.170 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-17 09:20:13.173 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0897df2f-e550-457f-9b98-3ef35ac04ec9_lenovotest1.jpg
+2024-02-17 09:20:13.173 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2196ed3f-3964-48eb-8d04-dd3fccd3ffcd_zen4.png
+2024-02-17 09:20:13.174 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-17 09:20:13.174 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-17 09:20:13.174 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-17 09:20:13.175 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-17 09:20:13.179 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.179 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.180 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.180 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.180 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.182 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-17 09:20:13.182 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-17 09:20:13.182 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-17 09:20:13.182 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-17 09:20:13.183 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.184 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-17 09:20:13.185 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-17 09:20:13.184 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-17 09:20:13.185 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-17 09:20:13.187 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.187 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.188 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:13.190 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:15.680 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/1
+2024-02-17 09:20:15.682 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/1
+2024-02-17 09:20:15.685 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/1
+2024-02-17 09:20:15.699 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:15.704 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2196ed3f-3964-48eb-8d04-dd3fccd3ffcd_zen4.png
+2024-02-17 09:20:15.705 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2196ed3f-3964-48eb-8d04-dd3fccd3ffcd_zen4.png
+2024-02-17 09:20:15.706 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/092e54b5-a736-42e8-851d-e5e4cca17ef9_zenphyrus2.png
+2024-02-17 09:20:15.706 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/4ed12b55-3508-44a8-903e-b67bd6125e50_zenphyrustest1.png
+2024-02-17 09:20:15.706 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/7afa0895-3e69-4b97-a95e-4e59bdea6ebe_zen5.png
+2024-02-17 09:20:15.706 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2cfc949-15e1-4a6f-ad40-a463b4f595f1_zephyrus3.png
+2024-02-17 09:20:15.707 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/7afa0895-3e69-4b97-a95e-4e59bdea6ebe_zen5.png
+2024-02-17 09:20:15.707 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/092e54b5-a736-42e8-851d-e5e4cca17ef9_zenphyrus2.png
+2024-02-17 09:20:15.707 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2cfc949-15e1-4a6f-ad40-a463b4f595f1_zephyrus3.png
+2024-02-17 09:20:15.708 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/4ed12b55-3508-44a8-903e-b67bd6125e50_zenphyrustest1.png
+2024-02-17 09:20:15.712 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:15.714 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:15.714 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:15.714 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:15.714 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:19.994 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:20:19.994 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-17 09:20:19.996 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:20:19.996 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-17 09:20:19.998 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-17 09:20:19.998 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all?keyword=&category_id=0&page=1&limit=10
+2024-02-17 09:20:19.998 [http-nio-1702-exec-8] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 1, limit = 10
+2024-02-17 09:20:20.002 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.021 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.024 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2196ed3f-3964-48eb-8d04-dd3fccd3ffcd_zen4.png
+2024-02-17 09:20:20.024 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0897df2f-e550-457f-9b98-3ef35ac04ec9_lenovotest1.jpg
+2024-02-17 09:20:20.024 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-17 09:20:20.024 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-17 09:20:20.024 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-17 09:20:20.025 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-17 09:20:20.025 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2196ed3f-3964-48eb-8d04-dd3fccd3ffcd_zen4.png
+2024-02-17 09:20:20.025 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0897df2f-e550-457f-9b98-3ef35ac04ec9_lenovotest1.jpg
+2024-02-17 09:20:20.025 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-17 09:20:20.025 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-17 09:20:20.025 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-17 09:20:20.025 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-17 09:20:20.027 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.027 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.027 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.027 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.027 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.029 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.030 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-17 09:20:20.030 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-17 09:20:20.030 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-17 09:20:20.030 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-17 09:20:20.031 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-17 09:20:20.031 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-17 09:20:20.031 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-17 09:20:20.031 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-17 09:20:20.033 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.033 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.034 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:20:20.034 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:21:00.328 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:21:00.330 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 09:21:00.336 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

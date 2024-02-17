@@ -27,3 +27,5 @@ api:
 jwt:
   expiration: 2592000 # thời hạn token 30 ngày: 2592000
   secretKey: Jie84xS69pxHX5ISznjCODmrGpWJsoSO3uXd/8MZBSA=
+
+logging.level.org.springframework.security: DEBUG

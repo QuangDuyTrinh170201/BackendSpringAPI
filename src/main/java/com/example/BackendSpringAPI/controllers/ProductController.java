@@ -4,12 +4,15 @@ import com.example.BackendSpringAPI.dtos.ProductDTO;
 import com.example.BackendSpringAPI.dtos.ProductImageDTO;
 import com.example.BackendSpringAPI.models.Product;
 import com.example.BackendSpringAPI.models.ProductImage;
+import com.example.BackendSpringAPI.repositories.ProductRepository;
 import com.example.BackendSpringAPI.responses.ProductListResponse;
 import com.example.BackendSpringAPI.responses.ProductResponse;
 import com.example.BackendSpringAPI.services.IProductService;
 import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,7 +38,9 @@ import java.util.stream.Collectors;
 @RequestMapping("${api.prefix}/products")
 @RequiredArgsConstructor
 public class ProductController {
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
     private final IProductService productService;
+    private final ProductRepository productRepository;
     @PostMapping("")
     public ResponseEntity<?> createProduct(@Valid @RequestBody ProductDTO productDTO, BindingResult result){
         try{
@@ -52,7 +57,6 @@ public class ProductController {
     }
 
     @PostMapping(value = "uploads/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    //POST http://localhost:8080/v1/api/products
     public ResponseEntity<?> uploadImages(@PathVariable("id") Long productId, @ModelAttribute List<MultipartFile> files){
         try {
             Product existingProduct = productService.getProductById(productId);
@@ -61,22 +65,26 @@ public class ProductController {
                 return ResponseEntity.badRequest().body("You can only upload maximum 5 images");
             }
             List<ProductImage> productImages = new ArrayList<>();
+            String firstImageName = null; // Lưu tên của ảnh đầu tiên
             for(MultipartFile file : files){
                 if(file.getSize() == 0){
                     continue;
                 }
-                //kiểm tra kích thước file và định dạng file
+                // kiểm tra kích thước file và định dạng file
                 if(file.getSize() > 10 * 1024 * 1024){
-                    //kích thước > 10 mb
-                    return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE).body("File is to large, maximum file is 10MB");
+                    // kích thước > 10 mb
+                    return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE).body("File is too large, maximum file size is 10MB");
                 }
                 String contentType = file.getContentType();
                 if(contentType == null || !contentType.startsWith("image/")){
                     return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE).body("File must be an image");
                 }
-                //lưu file và cập nhật thumbnail trong DTO
+                // lưu file và cập nhật thumbnail trong DTO
                 String filename = storeFile(file);
-                //lưu vào đối tượng product trong db
+                if (firstImageName == null) {
+                    firstImageName = filename; // Lưu tên của ảnh đầu tiên
+                }
+                // lưu vào đối tượng product trong db
                 ProductImage productImage = productService.createProductImage(existingProduct.getId(),
                         ProductImageDTO
                                 .builder()
@@ -84,11 +92,17 @@ public class ProductController {
                                 .build());
                 productImages.add(productImage);
             }
+            // Kiểm tra thumbnail có null và có ảnh đầu tiên trước khi cập nhật
+            if (firstImageName != null && existingProduct.getThumbnail() == null) {
+                existingProduct.setThumbnail(firstImageName);
+                productRepository.save(existingProduct); // Cập nhật trường thumbnail của sản phẩm
+            }
             return ResponseEntity.ok().body(productImages);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
 
     private String storeFile(MultipartFile file)throws IOException{
         if(!isImageFile(file) || file.getOriginalFilename() == null){
@@ -137,6 +151,7 @@ public class ProductController {
             @RequestParam(defaultValue = "0", name = "category_id") Long categoryId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int limit){
+        logger.info(String.format("keyword = %s, category_id = %d, page = %d, limit = %d", keyword, categoryId, page, limit));
         PageRequest pageRequest = PageRequest.of(page-1, limit, Sort.by("id").ascending());
         Page<ProductResponse> productPage = productService.getAllProducts(keyword, categoryId, pageRequest);
         int totalPages = productPage.getTotalPages();
