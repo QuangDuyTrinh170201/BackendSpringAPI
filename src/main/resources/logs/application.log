@@ -276,3 +276,169 @@
 2024-02-17 09:21:00.328 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-17 09:21:00.330 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-02-17 09:21:00.336 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 09:38:13.955 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 09:38:13.989 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 7648 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 09:38:13.990 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 09:38:14.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 09:38:14.774 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 7 JPA repository interfaces.
+2024-02-17 09:38:15.353 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 09:38:15.361 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:38:15.363 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 09:38:15.363 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 09:38:15.424 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 09:38:15.425 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1392 ms
+2024-02-17 09:38:15.542 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 09:38:15.593 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 09:38:15.635 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 09:38:15.838 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 09:38:15.859 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 09:38:15.985 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@708dfe10
+2024-02-17 09:38:15.987 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 09:38:16.004 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 09:38:16.005 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 09:38:16.807 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 09:38:16.810 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:38:17.169 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 09:38:17.230 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 09:38:18.036 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@220f2d1b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ee16a4e, org.springframework.security.web.context.SecurityContextHolderFilter@1bd7dd4a, org.springframework.security.web.header.HeaderWriterFilter@44ba9865, org.springframework.web.filter.CorsFilter@541b89ec, org.springframework.security.web.authentication.logout.LogoutFilter@7959747d, com.example.BackendSpringAPI.filters.JwtTokenFilter@690e7b89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c089fbc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e5259c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@698df5e8, org.springframework.security.web.access.ExceptionTranslationFilter@475cb91b, org.springframework.security.web.access.intercept.AuthorizationFilter@702f99a5]
+2024-02-17 09:38:18.184 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:38:18.201 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 09:38:18.207 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.559 seconds (process running for 5.072)
+2024-02-17 09:38:44.742 [http-nio-1702-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-17 09:38:44.743 [http-nio-1702-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-17 09:38:44.744 [http-nio-1702-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-17 09:38:44.750 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/1
+2024-02-17 09:38:44.761 [http-nio-1702-exec-2] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/images/1' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-17 09:38:44.774 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:38:44.807 [http-nio-1702-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:1702/api/v1/products/images/1?continue to session
+2024-02-17 09:38:44.807 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-17 09:38:44.811 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-17 09:38:44.826 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:38:44.826 [http-nio-1702-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:1702/error?continue to session
+2024-02-17 09:38:44.827 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-17 09:38:50.192 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:38:50.194 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 09:38:50.201 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 09:40:16.800 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 09:40:16.833 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 6084 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 09:40:16.834 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 09:40:17.462 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 09:40:17.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 7 JPA repository interfaces.
+2024-02-17 09:40:18.114 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 09:40:18.122 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:40:18.124 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 09:40:18.124 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 09:40:18.181 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 09:40:18.182 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1301 ms
+2024-02-17 09:40:18.299 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 09:40:18.344 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 09:40:18.382 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 09:40:18.582 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 09:40:18.604 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 09:40:18.726 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ccdacf5
+2024-02-17 09:40:18.728 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 09:40:18.749 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 09:40:18.749 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 09:40:19.561 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 09:40:19.563 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:40:19.915 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 09:40:19.972 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 09:40:20.809 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39090979, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3638ae1c, org.springframework.security.web.context.SecurityContextHolderFilter@5e077a32, org.springframework.security.web.header.HeaderWriterFilter@4c12e25d, org.springframework.web.filter.CorsFilter@c2a7ded, org.springframework.security.web.authentication.logout.LogoutFilter@2ee16a4e, com.example.BackendSpringAPI.filters.JwtTokenFilter@1728d307, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48715ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4077e676, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ba61340, org.springframework.security.web.access.ExceptionTranslationFilter@189d8bef, org.springframework.security.web.access.intercept.AuthorizationFilter@4d484eda]
+2024-02-17 09:40:20.951 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:40:20.966 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 09:40:20.972 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.464 seconds (process running for 4.904)
+2024-02-17 09:40:28.602 [http-nio-1702-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-17 09:40:28.603 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-17 09:40:28.603 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-02-17 09:40:28.609 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/1
+2024-02-17 09:40:28.617 [http-nio-1702-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/images/1' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-17 09:40:28.630 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:40:28.661 [http-nio-1702-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:1702/api/v1/products/images/1?continue to session
+2024-02-17 09:40:28.661 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-17 09:40:28.664 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-17 09:40:28.673 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:40:28.673 [http-nio-1702-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:1702/error?continue to session
+2024-02-17 09:40:28.674 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-17 09:40:35.065 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/1
+2024-02-17 09:40:35.068 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:40:35.069 [http-nio-1702-exec-3] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:1702/api/v1/products/images/1?continue to session
+2024-02-17 09:40:35.069 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-17 09:40:35.069 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-17 09:40:35.071 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:40:35.072 [http-nio-1702-exec-3] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:1702/error?continue to session
+2024-02-17 09:40:35.072 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-17 09:41:32.588 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:41:32.590 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 09:41:32.598 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 09:41:35.652 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 09:41:35.687 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 6276 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 09:41:35.688 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 09:41:36.338 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 09:41:36.431 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 7 JPA repository interfaces.
+2024-02-17 09:41:37.007 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 09:41:37.015 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:41:37.017 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 09:41:37.017 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 09:41:37.076 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 09:41:37.077 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1349 ms
+2024-02-17 09:41:37.198 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 09:41:37.243 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 09:41:37.283 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 09:41:37.485 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 09:41:37.509 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 09:41:37.649 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@285bf5ac
+2024-02-17 09:41:37.651 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 09:41:37.670 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 09:41:37.671 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 09:41:38.496 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 09:41:38.498 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:41:38.856 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 09:41:38.915 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 09:41:39.717 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@698df5e8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32317a37, org.springframework.security.web.context.SecurityContextHolderFilter@1e5259c0, org.springframework.security.web.header.HeaderWriterFilter@1bd7dd4a, org.springframework.web.filter.CorsFilter@1727d525, org.springframework.security.web.authentication.logout.LogoutFilter@73ccc475, com.example.BackendSpringAPI.filters.JwtTokenFilter@5af1b221, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40b0436e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78fdc1bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f7b7ac4, org.springframework.security.web.access.ExceptionTranslationFilter@64027866, org.springframework.security.web.access.intercept.AuthorizationFilter@220f2d1b]
+2024-02-17 09:41:39.870 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:41:39.890 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 09:41:39.896 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.553 seconds (process running for 4.989)
+2024-02-17 09:42:26.871 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:42:26.874 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 09:42:26.881 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-17 09:42:30.298 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-17 09:42:30.335 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 13968 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-17 09:42:30.336 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-17 09:42:31.014 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-17 09:42:31.098 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
+2024-02-17 09:42:31.664 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-17 09:42:31.670 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:42:31.672 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-17 09:42:31.673 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-17 09:42:31.732 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-17 09:42:31.733 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1355 ms
+2024-02-17 09:42:31.850 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-17 09:42:31.902 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-17 09:42:31.945 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-17 09:42:32.140 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-17 09:42:32.163 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-17 09:42:32.295 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a120c88
+2024-02-17 09:42:32.297 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-17 09:42:32.315 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-17 09:42:32.316 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-17 09:42:33.125 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-17 09:42:33.127 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:42:33.474 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-17 09:42:33.531 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-17 09:42:34.353 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@541b89ec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@698df5e8, org.springframework.security.web.context.SecurityContextHolderFilter@7c089fbc, org.springframework.security.web.header.HeaderWriterFilter@46b4819c, org.springframework.web.filter.CorsFilter@32317a37, org.springframework.security.web.authentication.logout.LogoutFilter@6c861b25, com.example.BackendSpringAPI.filters.JwtTokenFilter@518b0c12, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b4aeacd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40b0436e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1727d525, org.springframework.security.web.access.ExceptionTranslationFilter@44ba9865, org.springframework.security.web.access.intercept.AuthorizationFilter@31419d4a]
+2024-02-17 09:42:34.509 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-17 09:42:34.527 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-17 09:42:34.533 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 4.543 seconds (process running for 5.02)
+2024-02-17 09:42:40.079 [http-nio-1702-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-17 09:42:40.079 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-17 09:42:40.080 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-17 09:42:40.085 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/product_id/1
+2024-02-17 09:42:40.093 [http-nio-1702-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/images/product_id/1' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-17 09:42:40.105 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/product_id/1
+2024-02-17 09:42:40.266 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:42:53.592 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-17 09:42:53.594 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-17 09:42:53.603 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-17 09:58:46.971 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-17 09:58:46.973 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-17 09:58:46.979 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

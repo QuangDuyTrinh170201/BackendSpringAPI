@@ -121,6 +121,11 @@ public class ProductService implements IProductService{
 
 
     @Override
+    public List<ProductImage> getImagesByProductId(Long productId) {
+        return productImageRepository.findByProductId(productId);
+    }
+
+    @Override
     public List<Product> findProductsByIds(List<Long> productIds){
         return productRepository.findProductsByIds(productIds);
     }

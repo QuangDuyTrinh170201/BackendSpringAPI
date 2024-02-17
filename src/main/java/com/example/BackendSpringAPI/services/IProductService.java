@@ -23,4 +23,6 @@ public interface IProductService {
     public List<ProductResponse> getProductByCategoryId(Long categoryId) throws Exception;
 
     public List<Product> findProductsByIds(List<Long> productIds);
+
+    public List<ProductImage> getImagesByProductId(Long productId);
 }

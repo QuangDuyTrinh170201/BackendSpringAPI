@@ -194,6 +194,20 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/images/product_id/{productId}")
+    public ResponseEntity<?> getImagesByProductId(@PathVariable Long productId) {
+        try {
+            List<ProductImage> productImages = productService.getImagesByProductId(productId);
+            if (productImages.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(productImages);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error retrieving images for product with ID: " + productId);
+        }
+    }
+
+
     //@PostMapping("/generateFakeProducts")
     private ResponseEntity<String> generateFakeProducts(){
         Faker faker = new Faker();
