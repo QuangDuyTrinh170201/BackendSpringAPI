@@ -94,6 +94,14 @@ public class WebSecurityConfig {
                                     String.format("%s/order_details/**", apiPrefix)).hasRole(Role.ADMIN)
                             .requestMatchers(DELETE,
                                     String.format("%s/order_details/**", apiPrefix)).hasRole(Role.ADMIN)
+
+                            //Evaluate config
+                            .requestMatchers(GET,
+                                    String.format("%s/evaluates/**", apiPrefix)).permitAll()
+                            .requestMatchers(POST,
+                                    String.format("%s/evaluates/**", apiPrefix)).hasRole(Role.USER)
+                            .requestMatchers(DELETE,
+                                    String.format("%s/evaluates/**", apiPrefix)).hasRole(Role.ADMIN)
                             .anyRequest().authenticated();
                 })
                 .csrf(AbstractHttpConfigurer::disable);
