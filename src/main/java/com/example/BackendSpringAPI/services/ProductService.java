@@ -61,6 +61,14 @@ public class ProductService implements IProductService{
     }
 
     @Override
+    public List<ProductResponse> searchWithName(String keyword) {
+        List<Product> productList = productRepository.searchProductWithKeyname(keyword);
+        return productList.stream()
+                .map(ProductResponse::fromProduct)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     @Transactional
     public Product updateProduct(long id, ProductDTO productDTO) throws Exception {
         Product existingProduct = getProductById(id);

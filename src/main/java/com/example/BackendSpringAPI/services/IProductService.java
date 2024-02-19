@@ -25,4 +25,6 @@ public interface IProductService {
     public List<Product> findProductsByIds(List<Long> productIds);
 
     public List<ProductImage> getImagesByProductId(Long productId);
+
+    public List<ProductResponse> searchWithName(String keyword);
 }
