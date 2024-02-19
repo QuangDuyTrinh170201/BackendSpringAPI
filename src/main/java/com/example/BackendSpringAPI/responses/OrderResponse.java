@@ -61,6 +61,9 @@ public class OrderResponse {
     @JsonProperty("order_details")
     private List<OrderDetail> orderDetails;
 
+    @JsonProperty("active")
+    private Boolean active;
+
     public static OrderResponse fromOrder(Order order) {
         OrderResponse orderResponse =  OrderResponse
                 .builder()
@@ -79,6 +82,7 @@ public class OrderResponse {
                 .shippingDate(order.getShippingDate())
                 .paymentMethod(order.getPaymentMethod())
                 .orderDetails(order.getOrderDetails())
+                .active(order.getActive())
                 .build();
         return orderResponse;
     }
