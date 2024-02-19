@@ -165,15 +165,17 @@ public class ProductController {
 
     @GetMapping("/findByName")
     public ResponseEntity<ProductListResponse> getProductsWithName(
-            @RequestParam(defaultValue = "") String keyword) {
+            @RequestParam(defaultValue = "") String keyword,
+            @RequestParam(required = false) Long categoryId) {
 
-        List<ProductResponse> products = productService.searchWithName(keyword);
+        List<ProductResponse> products = productService.searchWithName(keyword, categoryId);
 
         return ResponseEntity.ok(ProductListResponse.builder()
                 .products(products)
                 .totalPages(1) // Since we're not using pagination, total pages is always 1
                 .build());
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable("id") Long productId){

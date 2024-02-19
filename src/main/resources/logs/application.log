@@ -2164,3 +2164,630 @@
 2024-02-19 10:48:54.655 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-19 10:48:54.658 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-02-19 10:48:54.666 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-19 15:49:37.776 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-19 15:49:37.847 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 5560 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-19 15:49:37.847 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-19 15:49:39.348 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19 15:49:39.468 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 8 JPA repository interfaces.
+2024-02-19 15:49:40.553 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-19 15:49:40.565 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-19 15:49:40.569 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-19 15:49:40.569 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-19 15:49:40.685 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-19 15:49:40.689 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2763 ms
+2024-02-19 15:49:40.933 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-19 15:49:41.078 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-19 15:49:41.169 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-19 15:49:41.690 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-19 15:49:41.758 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-19 15:49:42.023 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74ce7fdf
+2024-02-19 15:49:42.026 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-19 15:49:42.059 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-19 15:49:42.059 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-19 15:49:43.460 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-19 15:49:43.464 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-19 15:49:44.217 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-19 15:49:44.345 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-19 15:49:45.856 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65653da2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56c278bf, org.springframework.security.web.context.SecurityContextHolderFilter@cc64e22, org.springframework.security.web.header.HeaderWriterFilter@109a28c8, org.springframework.web.filter.CorsFilter@5985102f, org.springframework.security.web.authentication.logout.LogoutFilter@6a6a7c53, com.example.BackendSpringAPI.filters.JwtTokenFilter@4f5df012, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17fe4f0f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65c6a7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3695e28a, org.springframework.security.web.access.ExceptionTranslationFilter@29b78b34, org.springframework.security.web.access.intercept.AuthorizationFilter@4e7fbd6c]
+2024-02-19 15:49:46.130 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-19 15:49:46.158 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-19 15:49:46.167 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 8.947 seconds (process running for 9.955)
+2024-02-19 15:50:28.701 [http-nio-1702-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-19 15:50:28.705 [http-nio-1702-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-19 15:50:28.705 [http-nio-1702-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-02-19 15:50:28.717 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all
+2024-02-19 15:50:28.717 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:50:28.753 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:50:28.753 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:50:28.757 [http-nio-1702-exec-4] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/categories/getAll' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-19 15:50:28.777 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:50:28.777 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:50:28.829 [http-nio-1702-exec-3] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:50:28.841 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:50:28.849 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:50:28.861 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:50:28.865 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:50:29.067 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:50:36.311 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/users/login
+2024-02-19 15:50:36.315 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-02-19 15:50:36.319 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-02-19 15:50:36.739 [http-nio-1702-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-02-19 15:50:36.771 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:50:36.971 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:50:36.971 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:50:36.975 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:50:36.979 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:10.984 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:51:10.984 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:51:10.988 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:51:10.992 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:11.909 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:51:11.913 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:51:11.917 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:25.392 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/users/login
+2024-02-19 15:51:25.394 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-02-19 15:51:25.396 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-02-19 15:51:25.607 [http-nio-1702-exec-3] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-02-19 15:51:25.611 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:25.639 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:51:25.643 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all
+2024-02-19 15:51:25.644 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:51:25.646 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:51:25.646 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:51:25.648 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:51:25.649 [http-nio-1702-exec-7] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:51:25.650 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:25.651 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:51:25.652 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:25.655 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:25.655 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:51:33.650 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/category/3
+2024-02-19 15:51:33.667 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/category/3
+2024-02-19 15:51:33.671 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/category/3
+2024-02-19 15:51:33.695 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:36.838 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all
+2024-02-19 15:51:36.841 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:51:36.844 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:51:36.844 [http-nio-1702-exec-2] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:51:36.844 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:36.844 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:51:36.852 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:36.852 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:51:45.357 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:51:45.357 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all
+2024-02-19 15:51:45.361 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:51:45.361 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:51:45.361 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:51:45.361 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:51:45.365 [http-nio-1702-exec-5] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:51:45.365 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:45.365 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:51:45.369 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:45.373 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:45.373 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:51:48.622 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:51:48.622 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:51:48.622 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:51:48.626 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:51:48.626 [http-nio-1702-exec-7] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:51:48.626 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:48.626 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:51:48.630 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:48.630 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:48.634 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:51:58.632 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:51:58.632 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all
+2024-02-19 15:51:58.632 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:51:58.632 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:51:58.636 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:51:58.636 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:51:58.636 [http-nio-1702-exec-8] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:51:58.636 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:58.636 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:51:58.640 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:58.640 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:51:58.640 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:52:36.589 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/category/1
+2024-02-19 15:52:36.593 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/category/1
+2024-02-19 15:52:36.593 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/category/1
+2024-02-19 15:52:36.657 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.713 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:52:36.713 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:52:36.721 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-19 15:52:36.725 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-19 15:52:36.737 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.737 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.737 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.737 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.741 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.741 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.745 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-19 15:52:36.745 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-19 15:52:36.745 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-19 15:52:36.745 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-19 15:52:36.745 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-19 15:52:36.745 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-19 15:52:36.749 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.749 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:36.753 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:39.501 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:52:39.505 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:52:39.505 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:52:44.668 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:52:44.672 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:52:44.676 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:09.069 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/users/login
+2024-02-19 15:53:09.069 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-02-19 15:53:09.073 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-02-19 15:53:09.222 [http-nio-1702-exec-7] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-02-19 15:53:09.222 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:09.278 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories/getAll
+2024-02-19 15:53:09.278 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/all
+2024-02-19 15:53:09.278 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories/getAll
+2024-02-19 15:53:09.282 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-02-19 15:53:09.283 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories/getAll
+2024-02-19 15:53:09.283 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-02-19 15:53:09.284 [http-nio-1702-exec-1] INFO  c.e.B.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 10
+2024-02-19 15:53:09.284 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:09.285 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-02-19 15:53:09.289 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:09.289 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-02-19 15:53:09.290 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:11.075 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/category/4
+2024-02-19 15:53:11.075 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/category/4
+2024-02-19 15:53:11.079 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/category/4
+2024-02-19 15:53:11.087 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:11.809 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/category/3
+2024-02-19 15:53:11.811 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/category/3
+2024-02-19 15:53:11.814 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/category/3
+2024-02-19 15:53:11.823 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.120 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/category/1
+2024-02-19 15:53:12.124 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/category/1
+2024-02-19 15:53:12.124 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/category/1
+2024-02-19 15:53:12.154 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.201 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:53:12.201 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/a7584f02-6482-4bce-86b8-b6d56f21b6ea_ip15.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c0e45e7e-71e3-4542-a345-ccc64acfd4e4_airm1.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c7af2703-318f-45d5-bda7-07f415f8bbaa_15plus.jpg
+2024-02-19 15:53:12.205 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/55262e85-5412-4227-a3c9-f2d5b2bb7938_15promax.jpeg
+2024-02-19 15:53:12.209 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.209 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.209 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.209 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.209 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.209 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.213 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-19 15:53:12.213 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-19 15:53:12.213 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-19 15:53:12.213 [http-nio-1702-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/9f39a00d-01f9-4f6e-8c58-a01a319facb6_airm2.jpeg
+2024-02-19 15:53:12.213 [http-nio-1702-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c651945e-c2dc-4cbd-8d83-39876bfc05d3_m316inch.jpg
+2024-02-19 15:53:12.213 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/b2324b1c-67fc-471c-af2d-1daecc47ac51_m3pro.jpg
+2024-02-19 15:53:12.217 [http-nio-1702-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.217 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:12.217 [http-nio-1702-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:13.794 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:53:13.794 [http-nio-1702-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:53:13.798 [http-nio-1702-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:15.082 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:53:15.086 [http-nio-1702-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:53:15.086 [http-nio-1702-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:18.016 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:53:18.016 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:53:18.016 [http-nio-1702-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/2c0fd7d3-1c1d-4fe7-b6cb-49e31b6f7ba7_macbooktest1.jpg
+2024-02-19 15:53:18.016 [http-nio-1702-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/df2a9642-6f79-4da0-8200-5603c83f1774_15pro.jpg
+2024-02-19 15:53:18.020 [http-nio-1702-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 15:53:18.020 [http-nio-1702-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 16:17:28.511 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-19 16:17:28.515 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-19 16:17:28.531 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-19 18:17:42.926 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-19 18:17:42.988 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 19440 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-19 18:17:42.990 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-19 18:17:44.002 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19 18:17:44.090 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 8 JPA repository interfaces.
+2024-02-19 18:17:44.915 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-19 18:17:44.925 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-19 18:17:44.928 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-19 18:17:44.928 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-19 18:17:45.008 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-19 18:17:45.010 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1937 ms
+2024-02-19 18:17:45.215 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-19 18:17:45.295 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-19 18:17:45.343 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-19 18:17:45.623 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-19 18:17:45.652 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-19 18:17:45.820 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ad6f98e
+2024-02-19 18:17:45.822 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-19 18:17:45.852 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-19 18:17:45.853 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-19 18:17:46.790 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-19 18:17:46.792 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-19 18:17:47.191 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-19 18:17:47.265 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-19 18:17:48.168 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@755dae57, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18c49ecb, org.springframework.security.web.context.SecurityContextHolderFilter@52b2f795, org.springframework.security.web.header.HeaderWriterFilter@2b33553b, org.springframework.web.filter.CorsFilter@27ffe1d6, org.springframework.security.web.authentication.logout.LogoutFilter@3695e28a, com.example.BackendSpringAPI.filters.JwtTokenFilter@5cd6a827, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19640d53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32f0a9c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bb510b, org.springframework.security.web.access.ExceptionTranslationFilter@46aaf47c, org.springframework.security.web.access.intercept.AuthorizationFilter@74e322fd]
+2024-02-19 18:17:48.317 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-19 18:17:48.337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-19 18:17:48.343 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 5.773 seconds (process running for 6.504)
+2024-02-19 18:17:50.593 [http-nio-1702-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-19 18:17:50.593 [http-nio-1702-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-19 18:17:50.594 [http-nio-1702-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-19 18:17:50.601 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/orders/user/2
+2024-02-19 18:17:50.618 [http-nio-1702-exec-2] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/orders/user/2' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-19 18:17:50.643 [http-nio-1702-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/orders/user/2
+2024-02-19 18:17:50.826 [http-nio-1702-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 18:18:09.332 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/orders/user/9
+2024-02-19 18:18:09.337 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/orders/user/9
+2024-02-19 18:18:09.433 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 18:52:49.099 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-19 18:52:49.101 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-19 18:52:49.104 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-19 20:19:51.911 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-19 20:19:51.949 [main] INFO  c.e.B.BackendSpringAPI - Starting BackendSpringAPI using Java 17.0.9 with PID 21868 (C:\Users\MSI GAMING\Desktop\BackendSpringAPI\target\classes started by MSI GAMING in C:\Users\MSI GAMING\Desktop\BackendSpringAPI)
+2024-02-19 20:19:51.950 [main] INFO  c.e.B.BackendSpringAPI - No active profile set, falling back to 1 default profile: "default"
+2024-02-19 20:19:52.650 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19 20:19:52.726 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2024-02-19 20:19:53.343 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 1702 (http)
+2024-02-19 20:19:53.350 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1702"]
+2024-02-19 20:19:53.353 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-19 20:19:53.354 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2024-02-19 20:19:53.420 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-19 20:19:53.421 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1421 ms
+2024-02-19 20:19:53.543 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-19 20:19:53.599 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-02-19 20:19:53.643 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-19 20:19:53.838 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-19 20:19:53.863 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-19 20:19:54.969 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:819)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:440)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:273)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:105)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:689)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1686)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1435)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.example.BackendSpringAPI.BackendSpringAPI.main(BackendSpringAPI.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:939)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:809)
+	... 143 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 146 common frames omitted
+2024-02-19 20:19:54.974 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:273)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:105)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:689)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1686)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1435)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1166)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4850)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:501)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:610)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.example.BackendSpringAPI.BackendSpringAPI.main(BackendSpringAPI.java:10)
+2024-02-19 20:19:54.988 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-19 20:19:54.988 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-19 20:19:55.833 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-19 20:19:55.835 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-19 20:19:56.203 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-19 20:19:56.286 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-19 20:19:57.185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17bda3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@465b16bb, org.springframework.security.web.context.SecurityContextHolderFilter@12136fc6, org.springframework.security.web.header.HeaderWriterFilter@357f7e2d, org.springframework.web.filter.CorsFilter@45e1d6a5, org.springframework.security.web.authentication.logout.LogoutFilter@3f92977a, com.example.BackendSpringAPI.filters.JwtTokenFilter@1360ef8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@274783f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34f3189, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60df0131, org.springframework.security.web.access.ExceptionTranslationFilter@202e0ff4, org.springframework.security.web.access.intercept.AuthorizationFilter@7dc779bb]
+2024-02-19 20:19:57.396 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1702"]
+2024-02-19 20:19:57.415 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 1702 (http) with context path ''
+2024-02-19 20:19:57.424 [main] INFO  c.e.B.BackendSpringAPI - Started BackendSpringAPI in 5.84 seconds (process running for 6.418)
+2024-02-19 20:21:45.532 [http-nio-1702-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-19 20:21:45.533 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-19 20:21:45.534 [http-nio-1702-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-19 20:21:45.539 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/findByName?keyword=macbook%20air&categoryId=1
+2024-02-19 20:21:45.553 [http-nio-1702-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/products/findByName' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-02-19 20:21:45.563 [http-nio-1702-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/findByName?keyword=macbook%20air&categoryId=1
+2024-02-19 20:21:45.685 [http-nio-1702-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-19 20:21:45.749 [http-nio-1702-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40a9ff58
+2024-02-19 20:21:45.751 [http-nio-1702-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-19 20:21:45.873 [http-nio-1702-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 20:22:05.742 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/findByName?keyword=macbook%20air&categoryId=7
+2024-02-19 20:22:05.744 [http-nio-1702-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/findByName?keyword=macbook%20air&categoryId=7
+2024-02-19 20:22:05.750 [http-nio-1702-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 20:22:13.048 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/findByName?keyword=macbook%20air
+2024-02-19 20:22:13.049 [http-nio-1702-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/findByName?keyword=macbook%20air
+2024-02-19 20:22:13.071 [http-nio-1702-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-02-19 20:22:33.072 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-19 20:22:33.075 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-19 20:22:33.082 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

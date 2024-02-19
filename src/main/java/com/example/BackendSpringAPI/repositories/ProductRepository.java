@@ -31,6 +31,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findAllByCategory(Category category);
 
     @Query("SELECT p FROM Product p WHERE " +
-            "(:keyword IS NULL OR :keyword = '' OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%)")
-    List<Product> searchProductWithKeyname(@Param("keyword") String keyword);
+            "(:keyword IS NULL OR :keyword = '' OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%) " +
+            "AND (:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId)")
+    List<Product> searchProductWithKeyname(@Param("keyword") String keyword, @Param("categoryId") Long categoryId);
 }

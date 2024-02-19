@@ -61,12 +61,14 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public List<ProductResponse> searchWithName(String keyword) {
-        List<Product> productList = productRepository.searchProductWithKeyname(keyword);
+    public List<ProductResponse> searchWithName(String keyword, Long categoryId) {
+        // Lấy danh sách sản phẩm không phân trang dựa trên từ khóa và categoryId
+        List<Product> productList = productRepository.searchProductWithKeyname(keyword, categoryId);
         return productList.stream()
                 .map(ProductResponse::fromProduct)
                 .collect(Collectors.toList());
     }
+
 
     @Override
     @Transactional
