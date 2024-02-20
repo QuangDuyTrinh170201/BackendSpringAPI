@@ -50,6 +50,7 @@ public class WebSecurityConfig {
                                     String.format("%s/products/findByName**", apiPrefix),
                                     String.format("%s/products/images/*", apiPrefix),
                                     String.format("%s/products/category**", apiPrefix)).permitAll()
+                            .requestMatchers(DELETE, String.format("%s/products/images/*", apiPrefix)).hasRole(Role.ADMIN)
                             .requestMatchers(GET, String.format("%s/roles**", apiPrefix)).permitAll()
                             .requestMatchers(POST,
                                     String.format("%s/categories/**", apiPrefix)).hasAnyRole(Role.ADMIN)

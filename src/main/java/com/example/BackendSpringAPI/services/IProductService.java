@@ -27,4 +27,6 @@ public interface IProductService {
     public List<ProductImage> getImagesByProductId(Long productId);
 
     public List<ProductResponse> searchWithName(String keyword, Long categoryId);
+
+    public void deleteImage(long imageId);
 }

@@ -1,5 +1,6 @@
 package com.example.BackendSpringAPI.services;
 
+import com.example.BackendSpringAPI.controllers.ProductController;
 import com.example.BackendSpringAPI.dtos.ProductDTO;
 import com.example.BackendSpringAPI.dtos.ProductImageDTO;
 import com.example.BackendSpringAPI.exceptions.DataNotFoundException;
@@ -13,10 +14,16 @@ import com.example.BackendSpringAPI.repositories.ProductRepository;
 import com.example.BackendSpringAPI.responses.ProductResponse;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -27,6 +34,7 @@ public class ProductService implements IProductService{
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
     private final ProductImageRepository productImageRepository;
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
     @Override
     @Transactional
     public Product createProduct(ProductDTO productDTO) throws DataNotFoundException {
@@ -67,6 +75,28 @@ public class ProductService implements IProductService{
         return productList.stream()
                 .map(ProductResponse::fromProduct)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void deleteImage(long imageId) {
+        Optional<ProductImage> imageOptional = productImageRepository.findById(imageId);
+        if (imageOptional.isPresent()) {
+            ProductImage imageToDelete = imageOptional.get();
+            // Xóa file từ hệ thống file trước
+            String imageUrl = imageToDelete.getImageUrl();
+            if (imageUrl != null) {
+                Path imagePath = Paths.get("uploads/" + imageUrl);
+                try {
+                    Files.deleteIfExists(imagePath);
+                } catch (IOException e) {
+
+                    logger.error("Failed to delete image file: " + imageUrl);
+                }
+            }
+            productImageRepository.delete(imageToDelete);
+        } else {
+            throw new IllegalArgumentException("Image not found with id: " + imageId);
+        }
     }
 
 

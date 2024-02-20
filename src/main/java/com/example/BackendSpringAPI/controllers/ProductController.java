@@ -4,6 +4,7 @@ import com.example.BackendSpringAPI.dtos.ProductDTO;
 import com.example.BackendSpringAPI.dtos.ProductImageDTO;
 import com.example.BackendSpringAPI.models.Product;
 import com.example.BackendSpringAPI.models.ProductImage;
+import com.example.BackendSpringAPI.repositories.ProductImageRepository;
 import com.example.BackendSpringAPI.repositories.ProductRepository;
 import com.example.BackendSpringAPI.responses.ProductListResponse;
 import com.example.BackendSpringAPI.responses.ProductResponse;
@@ -145,6 +146,18 @@ public class ProductController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @DeleteMapping("/images/{imageId}")
+    public ResponseEntity<String> deleteImage(@PathVariable long imageId) {
+        try {
+            productService.deleteImage(imageId);
+            return ResponseEntity.ok(String.format("Image with id = %d deleted successfully", imageId));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+
     @GetMapping("/all")
     public ResponseEntity<ProductListResponse> getProducts(
             @RequestParam(defaultValue = "") String keyword,
