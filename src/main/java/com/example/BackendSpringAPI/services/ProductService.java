@@ -41,6 +41,13 @@ public class ProductService implements IProductService{
         Category existingCategory = categoryRepository
                 .findById(productDTO.getCategoryId())
                 .orElseThrow(() -> new DataNotFoundException("Cannot find category of this product with id: " + productDTO.getCategoryId()));
+
+        // Kiểm tra xem có sản phẩm nào trùng tên không
+        Optional<Product> existingProduct = productRepository.findByName(productDTO.getName());
+        if(existingProduct.isPresent()) {
+            throw new RuntimeException("A product with the same name already exists.");
+        }
+
         Product newProduct = Product.builder()
                 .name(productDTO.getName())
                 .price(productDTO.getPrice())
@@ -50,6 +57,7 @@ public class ProductService implements IProductService{
                 .build();
         return productRepository.save(newProduct);
     }
+
 
     @Override
     public Product getProductById(long productId) throws Exception {

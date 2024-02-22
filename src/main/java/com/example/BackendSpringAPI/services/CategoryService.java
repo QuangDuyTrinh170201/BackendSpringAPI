@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +18,10 @@ public class CategoryService implements ICategoryService{
     @Override
     @Transactional
     public Category createCategory(CategoryDTO categoryDTO) {
+        Optional<Category> existingCategory = categoryRepository.findByName(categoryDTO.getName());
+        if(existingCategory.isPresent()) {
+            throw new RuntimeException("A category with the same name already exists.");
+        }
         Category newCategory = Category.builder()
                 .name(categoryDTO.getName()).build();
         return categoryRepository.save(newCategory);

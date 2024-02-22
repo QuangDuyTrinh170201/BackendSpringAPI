@@ -15,6 +15,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     boolean existsByName(String name);
     Page<Product> findAll(Pageable pageable);
     Page<Product> findByCategory(Category category, Pageable pageable);
+    Optional<Product> findByName(String name);
 
     @Query("SELECT p FROM Product p WHERE " +
     "(:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId) " +

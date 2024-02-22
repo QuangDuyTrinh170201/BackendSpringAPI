@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -28,12 +29,16 @@ public class CategoryController {
     private final LocaleResolver localeResolver;
     @PostMapping("")
     public ResponseEntity<?> createCategory(@Valid @RequestBody CategoryDTO categoryDTO, BindingResult result){
-        if(result.hasErrors()){
-            List<String> errorMessage = result.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
-            return ResponseEntity.badRequest().body(errorMessage);
+        try{
+            if(result.hasErrors()){
+                List<String> errorMessage = result.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
+                return ResponseEntity.badRequest().body(errorMessage);
+            }
+            categoryService.createCategory(categoryDTO);
+            return ResponseEntity.ok("Insert category successfully!");
+        }catch(Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
-        categoryService.createCategory(categoryDTO);
-        return ResponseEntity.ok("Insert category successfully!");
     }
 
     //Hiển thị tất cả categories
