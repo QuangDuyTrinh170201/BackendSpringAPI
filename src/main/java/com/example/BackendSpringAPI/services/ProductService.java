@@ -112,19 +112,25 @@ public class ProductService implements IProductService{
     @Transactional
     public Product updateProduct(long id, ProductDTO productDTO) throws Exception {
         Product existingProduct = getProductById(id);
-        if(existingProduct != null){
-            Category existingCategory = categoryRepository
-                    .findById(productDTO.getCategoryId())
-                    .orElseThrow(() -> new DataNotFoundException("Cannot find category of this product with id: " + productDTO.getCategoryId()));
-            existingProduct.setName(productDTO.getName());
-            existingProduct.setCategory(existingCategory);
-            existingProduct.setPrice(productDTO.getPrice());
-            existingProduct.setDescription(productDTO.getDescription());
-            existingProduct.setThumbnail(productDTO.getThumbnail());
-            return productRepository.save(existingProduct);
+
+        // Kiểm tra xem có sản phẩm nào khác có cùng tên không
+        Optional<Product> existingProductWithName = productRepository.findByName(productDTO.getName());
+        if(existingProductWithName.isPresent() && existingProductWithName.get().getId() != id) {
+            throw new RuntimeException("A product with the same name already exists.");
         }
-        return null;
+
+        Category existingCategory = categoryRepository
+                .findById(productDTO.getCategoryId())
+                .orElseThrow(() -> new DataNotFoundException("Cannot find category of this product with id: " + productDTO.getCategoryId()));
+
+        existingProduct.setName(productDTO.getName());
+        existingProduct.setCategory(existingCategory);
+        existingProduct.setPrice(productDTO.getPrice());
+        existingProduct.setDescription(productDTO.getDescription());
+        existingProduct.setThumbnail(productDTO.getThumbnail());
+        return productRepository.save(existingProduct);
     }
+
 
     @Override
     @Transactional

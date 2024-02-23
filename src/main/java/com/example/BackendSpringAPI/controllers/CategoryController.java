@@ -17,8 +17,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.LocaleResolver;
 
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 @RestController
 @RequestMapping("${api.prefix}/categories")
@@ -60,12 +59,20 @@ public class CategoryController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<UpdateCategoryResponse> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDTO categoryDTO, HttpServletRequest request){
-        categoryService.updateCategory(id, categoryDTO);
-        Locale locale = localeResolver.resolveLocale(request);
-        return ResponseEntity.ok(UpdateCategoryResponse.builder()
-                        .message(messageSource.getMessage("category.update_category.update_successfully", null, locale))
-                .build());
+    public ResponseEntity<?> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDTO categoryDTO, HttpServletRequest request) {
+        try {
+            categoryService.updateCategory(id, categoryDTO);
+            Locale locale = localeResolver.resolveLocale(request);
+            String message = messageSource.getMessage("category.update_category.update_successfully", null, locale);
+            return ResponseEntity.ok(Collections.singletonMap("message", message));
+        } catch (RuntimeException e) {
+            // Xử lý ngoại lệ và trả về một phản hồi lỗi
+            Locale locale = localeResolver.resolveLocale(request);
+            String errorMessage = messageSource.getMessage("category.update_category.update_failed", null, locale);
+            Map<String, String> errorResponse = new HashMap<>();
+            errorResponse.put("error", errorMessage);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+        }
     }
 
     @DeleteMapping("/{id}")

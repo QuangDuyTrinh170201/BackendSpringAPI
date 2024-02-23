@@ -42,10 +42,17 @@ public class CategoryService implements ICategoryService{
     @Transactional
     public Category updateCategory(long categoryId, CategoryDTO categoryDTO) {
         Category existingCategory = getCategoryById(categoryId);
+
+        // Kiểm tra xem tên mới của category có trùng với bất kỳ category nào khác không
+        Optional<Category> existingCategoryWithName = categoryRepository.findByName(categoryDTO.getName());
+        if (existingCategoryWithName.isPresent() && existingCategoryWithName.get().getId() != categoryId) {
+            throw new RuntimeException("A category with the same name already exists.");
+        }
+
         existingCategory.setName(categoryDTO.getName());
-        categoryRepository.save(existingCategory);
-        return  existingCategory;
+        return categoryRepository.save(existingCategory);
     }
+
 
     @Override
     @Transactional
