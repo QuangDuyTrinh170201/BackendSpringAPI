@@ -40,7 +40,7 @@ public class CategoryService implements ICategoryService{
 
     @Override
     @Transactional
-    public Category updateCategory(long categoryId, CategoryDTO categoryDTO) {
+    public Category updateCategory(long categoryId, CategoryDTO categoryDTO) throws Exception{
         Category existingCategory = getCategoryById(categoryId);
 
         // Kiểm tra xem tên mới của category có trùng với bất kỳ category nào khác không

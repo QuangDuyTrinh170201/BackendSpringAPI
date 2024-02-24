@@ -59,21 +59,15 @@ public class CategoryController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDTO categoryDTO, HttpServletRequest request) {
+    public ResponseEntity<?> updateCategory(@PathVariable long id, @RequestBody CategoryDTO categoryDTO) {
         try {
-            categoryService.updateCategory(id, categoryDTO);
-            Locale locale = localeResolver.resolveLocale(request);
-            String message = messageSource.getMessage("category.update_category.update_successfully", null, locale);
-            return ResponseEntity.ok(Collections.singletonMap("message", message));
-        } catch (RuntimeException e) {
-            // Xử lý ngoại lệ và trả về một phản hồi lỗi
-            Locale locale = localeResolver.resolveLocale(request);
-            String errorMessage = messageSource.getMessage("category.update_category.update_failed", null, locale);
-            Map<String, String> errorResponse = new HashMap<>();
-            errorResponse.put("error", errorMessage);
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+            Category updatedCategory = categoryService.updateCategory(id, categoryDTO);
+            return ResponseEntity.ok(updatedCategory);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id){
